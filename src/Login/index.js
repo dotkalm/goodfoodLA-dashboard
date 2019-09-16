@@ -1,10 +1,8 @@
-import React, { Component } from 'react
+import React, { Component } from 'react'
 import { withRouter, NavLink } from 'react-router-dom'
-
 import { withFirebase } from '../Firebase'
-import * as ROUTES from '../constants/routes'
 
-const SignIn = (props) => (
+const Login = (props) => (
   <div>
     <SignInForm signIn={props.signIn} />
     <SignUpLink />
@@ -25,12 +23,13 @@ class SignInFormBase extends Component {
       .doSignInWithEmailAndPassword(email, password)
       .then(() => 
         
-        this.props.history.push(ROUTES.ITEMS)
+        this.props.history.push('/')
       )
       .catch(error => {
         this.setState({error})
       })
-    this.props.signIn(this.props.firebase.auth.W) 
+      console.log(this.props)
+    //this.props.signIn(this.props.firebase.auth.W) 
   }
 
   onChange = event => 
@@ -66,9 +65,9 @@ const SignInForm = withRouter(withFirebase(SignInFormBase))
 
 const SignUpLink = () => (
   <p>
-    Don't have an account? <NavLink exact to={ROUTES.SIGN_UP}>Sign Up</NavLink>
+    Don't have an account? <NavLink exact to='/'>Sign Up</NavLink>
   </p>
 )
 
-export default SignIn
+export default Login 
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Graph from './Graph'
 import { Route, Switch } from 'react-router-dom'
+import Login from './Login'
 
 class App extends Component {
     state = {
