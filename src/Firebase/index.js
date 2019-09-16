@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import FirebaseContext, { withFirebase } from './context'
 import Firebase from './firebase'
 
