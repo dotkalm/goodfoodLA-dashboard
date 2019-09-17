@@ -6,11 +6,15 @@ import { Route, Switch } from 'react-router-dom'
 import Login from './Login'
 import Add from './Add'
 import Nav from './Nav'
+import { withFirebase } from './Firebase'
 
 class App extends Component {
     state = {
-        toggle: false, 
+        stats: [] 
     }
+    handleSelect = (data) => {
+        this.setState({stats: data})
+    } 
     render(){
         return(
           <div>

@@ -4,8 +4,7 @@ import { withFirebase } from '../Firebase'
 
 const Login = (props) => (
   <div>
-    <SignInForm signIn={props.signIn} />
-    <SignUpLink />
+   <SignInForm handleSelect={props.handleSelect}/>
   </div>
 )
 
@@ -13,9 +12,22 @@ class SignInFormBase extends Component {
   state = {
     email: '',
     password: '',
-    error: null
+    error: null,
+    stats: []
   }
-
+    componentDidMount(){
+        this.props.firebase.topLevel().on('value', snapshot => 
+            {this.setState({ loading: false })
+            const affordable = snapshot.child("affordable").val()
+                const newArray = []
+                for (const item in affordable){
+                    newArray.push(affordable[item])
+                }
+                this.setState({stats: newArray})
+                this.props.handleSelect(newArray)
+                console.log(this.props)
+        })
+    }
   onSubmit = event => {
     event.preventDefault()
     const { email, password } = this.state
@@ -28,7 +40,6 @@ class SignInFormBase extends Component {
       .catch(error => {
         this.setState({error})
       })
-      console.log(this.props)
     //this.props.signIn(this.props.firebase.auth.W) 
   }
 
@@ -38,26 +49,7 @@ class SignInFormBase extends Component {
   render() {
     const { email, password, error } = this.state
     return (
-      <form onSubmit={this.onSubmit}>
-        <input 
-          name='email'
-          type='text'
-          value={email}
-          onChange={this.onChange}
-          placeholder='Email Address'
-        />
-
-        <input 
-          name='password'
-          type='password'
-          value={password}
-          onChange={this.onChange}
-          placeholder='Password'
-        />
-        <button type='submit'>sign in</button>
-        {error && error.message}
-      </form>
-    )
+    <div> HI  </div>  )
   }
 }
 

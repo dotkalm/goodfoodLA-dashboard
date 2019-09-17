@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
 import { withRouter, NavLink } from 'react-router-dom'
 import { withFirebase } from '../Firebase'
+import database from '../Firebase/firebase'
+import TopLevel from '../TopLevel/index'
 
-const Add = (props) => (
-    <div>
-        <AddForm add={props.add} />
-  </div>
-)
+const Add = (props) => { 
+    return (
+        <div>
+            <AddForm add={props.add} />
+            <TopLevel/>
+      </div>
+    )
+}
 
 class AddFormBase extends Component {
     state = {
