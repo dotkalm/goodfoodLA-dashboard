@@ -34,7 +34,11 @@ class App extends Component {
                   render={(props)=>{
                     return <Healthy data={this.state}/>
                 }}/>
-                
+
+                <Route exact path="/Affordable"
+                  render={(props)=>{
+                    return <Affordable data={this.state}/>
+                }}/>
                 
                 <Route exact path='/' 
                     render={()=>{
