@@ -25,7 +25,7 @@ class SignInFormBase extends Component {
                 }
                 this.setState({stats: newArray})
                 this.props.handleSelect(newArray)
-                console.log(this.props)
+                console.log(this.state.stats, 'line 28')
         })
     }
   onSubmit = event => {
@@ -49,7 +49,7 @@ class SignInFormBase extends Component {
   render() {
     const { email, password, error } = this.state
     return (
-    <div> HI  </div>  )
+    <div> </div>  )
   }
 }
 

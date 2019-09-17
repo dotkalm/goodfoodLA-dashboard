@@ -14,6 +14,7 @@ class App extends Component {
     }
     handleSelect = (data) => {
         this.setState({stats: data})
+        console.log(data, 'data app.js')
     } 
     render(){
         return(
@@ -21,9 +22,9 @@ class App extends Component {
             <Nav routes={ROUTES.NAV}/>
               <Switch>
                 <Route exact path='/' render={(props)=>{
-                  return <Graph data={this.state}/>
+                  return <Graph data={this.state.stats} handleSelect={this.handleSelect}/>
                 }}/>
-                <Route exact path={ROUTES.ADD} render={()=>{
+                <Route exact path={ROUTES.ADD} render={(props)=>{
                   return<Add username={this.state.username}/>}}/>
               </Switch>
           </div>
