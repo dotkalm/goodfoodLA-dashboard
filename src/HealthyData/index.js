@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-
+import HealthyDataSort from './sort'
 import { withFirebase } from '../Firebase'
 import * as ROUTES from '../constants/routes'
 
