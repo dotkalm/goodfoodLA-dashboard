@@ -16,8 +16,8 @@ const Nav = ({ routes = [] }) => {
         </NavLeft>
         <NavMiddle>
           {
-            routes.map(route =>
-              <Link exact to={`/${route}`}>{route}</Link>
+            routes.map((route, i) =>
+              <Link key={i} exact to={`/${route}`}>{route}</Link>
             )
           }
         </NavMiddle>
