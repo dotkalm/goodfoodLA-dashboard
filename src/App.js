@@ -6,11 +6,17 @@ import Login from './Login'
 import Add from './Add'
 import Nav from './Nav'
 import Affordable from './Affordable'
+import { withFirebase } from './Firebase'
+
 
 class App extends Component {
     state = {
-        toggle: false, 
+        stats: [] 
     }
+    handleSelect = (data) => {
+        this.setState({stats: data})
+        console.log(data, 'data app.js')
+    } 
     render(){
         return(
           <div>
@@ -23,6 +29,10 @@ class App extends Component {
                 }}/>
                 <Route exact path={ROUTES.ADD} render={()=>{
                     return<Add username={this.state.username}/>}}/>
+                  return <Graph data={this.state.stats} handleSelect={this.handleSelect}/>
+                }}/>
+                <Route exact path={ROUTES.ADD} render={(props)=>{
+                  return<Add username={this.state.username}/>}}/>
               </Switch>
           </div>
         )
