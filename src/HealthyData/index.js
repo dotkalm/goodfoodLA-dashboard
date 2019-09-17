@@ -27,11 +27,9 @@ class SignUpFormBase extends Component {
                     newArray.push(affordable[item])
                 }
                 this.setState({stats: newArray})
-                console.log(this.state.stats, 'line 28')
         })
     }
   render() {
-   console.log(this.state) 
     const healthyStats =  this.state.stats.map((e,i) => {
         return (
             <div key={`${i}`}>
@@ -45,7 +43,9 @@ class SignUpFormBase extends Component {
       
       })
     return (
-           <div> {healthyStats}  </div>
+           <div> 
+           <HealthyDataSort healthData={this.state.stats}/>
+           </div>
          )
   }
 }
