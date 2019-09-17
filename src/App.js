@@ -22,14 +22,13 @@ class App extends Component {
           <div>
             <Nav routes={ROUTES.NAV}/>                
               <Switch>
-                <Route exact path={"/Affordable"} render={()=>{
-                    return <Affordable/>}}/>
-                <Route exact path='/' render={(props)=>{
-                    return <Graph data={this.state}/>
-                }}/>
                 <Route exact path={ROUTES.ADD} render={()=>{
                     return<Add username={this.state.username}/>}}/>
                   return <Graph data={this.state.stats} handleSelect={this.handleSelect}/>
+                }}/>
+                
+                <Route exact path='/' render={(props)=>{
+                    return <Graph data={this.state}/>
                 }}/>
                 <Route exact path={ROUTES.ADD} render={(props)=>{
                   return<Add username={this.state.username}/>}}/>

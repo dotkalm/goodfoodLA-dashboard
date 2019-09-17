@@ -18,13 +18,12 @@ class Graph  extends Component {
 
         const keys = this.props.data.map((e,i,array) => {
             return (
-                <div>
+                <div key={`${i}`}>
                     <div key={`group ${i}`}> group: {e.group} </div>
                     <div key={`indicator ${i}`}> indicator: {e.indicator} </div>
                     <div key={`baseline ${i}`}> baseline: {e.baseline} </div>
                     <div key={`update ${i}`}> update: {e.update} </div>
                     <div key={`source ${i}`}> source: {e.source} </div>
-
                 </div>
             )            
         })
