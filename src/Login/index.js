@@ -4,8 +4,8 @@ import { withFirebase } from '../Firebase'
 
 const Login = (props) => (
   <div>
-    <SignInForm signIn={props.signIn} />
-    <SignUpLink />
+   <SignInForm handleSelect={props.handleSelect}/>
+   <SignUpLink />
   </div>
 )
 
@@ -13,9 +13,22 @@ class SignInFormBase extends Component {
   state = {
     email: '',
     password: '',
-    error: null
+    error: null,
+    stats: []
   }
-
+    componentDidMount(){
+        this.props.firebase.topLevel().on('value', snapshot => 
+            {this.setState({ loading: false })
+            const affordable = snapshot.val()
+                const newArray = []
+                for (const item in affordable){
+                    newArray.push(affordable[item])
+                }
+                this.setState({stats: newArray})
+                this.props.handleSelect(newArray)
+                console.log(this.props)
+        })
+    }
   onSubmit = event => {
     event.preventDefault()
     const { email, password } = this.state
@@ -28,7 +41,6 @@ class SignInFormBase extends Component {
       .catch(error => {
         this.setState({error})
       })
-      console.log(this.props)
     //this.props.signIn(this.props.firebase.auth.W) 
   }
 

@@ -4,20 +4,24 @@ import * as ROUTES from './constants/routes'
 import { Route, Switch } from 'react-router-dom'
 import Login from './Login'
 import Add from './Add'
+import { withFirebase } from './Firebase'
+
 
 class App extends Component {
     state = {
-        toggle: false, 
+        stats: [] 
     }
+    handleSelect = (data) => {
+        this.setState({stats: data})
+    } 
     render(){
         return(
             <main>
                 <Switch>
                     <Route exact path='/' render={(props)=>{
-                        return <Graph data={this.state}/>
+                        return <Graph stats={this.state.stats} handleSelect={this.handleSelect}/>
                     }}/>
-                    <Route exact path={ROUTES.ADD} render={()=>{
-                        return<Add username={this.state.username}/>}}/>
+                    <Route exact path={ROUTES.ADD} render={(props)=> <Add/>}/>
             </Switch>
         </main>
         )

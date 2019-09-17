@@ -6,10 +6,11 @@ class Graph  extends Component {
         toggle: false, 
     }
     render(){
+        console.log(this.props.stats)
         return(
             <div>
                 sanity check
-                <Login/>
+                <Login handleSelect={this.props.handleSelect}/>
             </div>
         )
     }
