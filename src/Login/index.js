@@ -28,29 +28,7 @@ class SignInFormBase extends Component {
                 console.log(this.state.stats, 'line 28')
         })
     }
-  onSubmit = event => {
-    event.preventDefault()
-    const { email, password } = this.state
-    this.props.firebase
-      .doSignInWithEmailAndPassword(email, password)
-      .then(() => 
-        
-        this.props.history.push('/')
-      )
-      .catch(error => {
-        this.setState({error})
-      })
-    //this.props.signIn(this.props.firebase.auth.W) 
-  }
 
-  onChange = event => 
-    this.setState({ [event.target.name] : event.target.value})
-
-  render() {
-    const { email, password, error } = this.state
-    return (
-    <div> </div>  )
-  }
 }
 
 const SignInForm = withRouter(withFirebase(SignInFormBase))
