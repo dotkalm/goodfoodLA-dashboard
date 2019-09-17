@@ -5,11 +5,21 @@ class Graph  extends Component {
     state = {
         toggle: false, 
     }
+
+
     render(){
+        const stats = this.props.stats.map((e,i,array) => {
+            
+            return(
+            <p key={i}>
+                {e.indicator}
+            </p>
+            )
+        })
         console.log(this.props.stats)
-        return(
+                return(
             <div>
-                sanity check
+                    {stats}
                 <Login handleSelect={this.props.handleSelect}/>
             </div>
         )

@@ -5,7 +5,6 @@ import { withFirebase } from '../Firebase'
 const Login = (props) => (
   <div>
    <SignInForm handleSelect={props.handleSelect}/>
-   <SignUpLink />
   </div>
 )
 
@@ -19,7 +18,7 @@ class SignInFormBase extends Component {
     componentDidMount(){
         this.props.firebase.topLevel().on('value', snapshot => 
             {this.setState({ loading: false })
-            const affordable = snapshot.val()
+            const affordable = snapshot.child("affordable").val()
                 const newArray = []
                 for (const item in affordable){
                     newArray.push(affordable[item])
