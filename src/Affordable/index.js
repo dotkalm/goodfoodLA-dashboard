@@ -18,6 +18,15 @@ class Affordable extends Component {
     
     return(
       <form onSubmit={this.onSubmit}>
+        Food Insecurity - All Households
+        <br/>Enter Number
+        <input 
+          type="text"
+          name=""
+          value=""
+          onChange={this.onChange}
+        />
+        <br/>Source
         <input 
           type="text"
           name=""
