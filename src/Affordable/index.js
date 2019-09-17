@@ -5,16 +5,16 @@ class Affordable extends Component {
 
   state = {
     chartData: {
-      labels: ['Adults living at 0-199% FPL', 'All adults'],
+      labels: ['Adults living at 0-199% FPL', 'All adults', 'something'],
       datasets: [
         {
           label: "Fruit & Vegetable Accessibility",
           data: [
-            81.9, 79.7
+            81.9, 79.7, 80
           ],
           backgroundColor:[
-            'rgba(255, 99, 132, 0.6)',
-            'rgba(54, 162, 235, 0.6)'
+            'rgba(255, 99, 132, 0.8)',
+            'rgba(54, 162, 235, 0.8)'
           ]
         }
       ]
@@ -38,7 +38,7 @@ class Affordable extends Component {
           
           <Bar
             data={this.state.chartData}
-            width={1000}
+            width={800}
             height={500}
             options={{maintainAspectRatio: false , responsive:false}}
           />

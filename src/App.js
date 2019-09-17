@@ -31,7 +31,7 @@ class App extends Component {
                 }}/> 
 
                 <Route exact path={ROUTES.HEALTHY} 
-                  render={(props)=>{
+                  render={()=>{
                     return <Healthy data={this.state}/>
                 }}/>
 

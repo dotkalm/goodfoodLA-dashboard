@@ -1,26 +1,21 @@
 import React, { Component } from 'react'
-import { withRouter, NavLink } from 'react-router-dom'
-import { withFirebase } from '../Firebase'
-
-const Healthy = (props) => (
-    <div>
-        HI
-    </div>
-) 
-
-class HealthyFormBase extends Component {
+import HealthyData from '../HealthyData'
+class Healthy extends Component {
     state = {
         dataset: [],
     }
     componentDidMount(){
-        this.props.firebase.topLevel().on('value',
-            snapshot => {
-                const healthy = snapshot.child("Healthy").val()
-                    console.log(healthy)
-        })
+        console.log('healthy')
+    }
+
+    render(){
+    
+        return (
+        <div>
+            <HealthyData/>
+        </div>
+        )
     }
 }
-
-const HealthyForm = withRouter(withFirebase(HealthyFormBase))
 
 export default Healthy
