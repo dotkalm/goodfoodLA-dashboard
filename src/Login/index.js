@@ -49,26 +49,7 @@ class SignInFormBase extends Component {
   render() {
     const { email, password, error } = this.state
     return (
-      <form onSubmit={this.onSubmit}>
-        <input 
-          name='email'
-          type='text'
-          value={email}
-          onChange={this.onChange}
-          placeholder='Email Address'
-        />
-
-        <input 
-          name='password'
-          type='password'
-          value={password}
-          onChange={this.onChange}
-          placeholder='Password'
-        />
-        <button type='submit'>sign in</button>
-        {error && error.message}
-      </form>
-    )
+    <div> HI  </div>  )
   }
 }
 
