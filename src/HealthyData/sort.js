@@ -34,7 +34,7 @@ const HealthyDataSort = (props) => {
                     datasets: [
                         {
                             label: e.indicator,
-                            data: [+(e.baseline.toString().replace(/\%/,'')), e.update],
+                            data: [+(e.baseline.toString().replace(/\%/,'')), +(e.update.toString().replace(/\%/,''))],
                             backgroundColor:[
                                 'rgba(255, 99, 132, 0.8)',
                                 'rgba(54, 162, 235, 0.8)'
