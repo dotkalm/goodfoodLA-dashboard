@@ -4,6 +4,8 @@ const HealthyDataSort = (props) => {
     const newData = [...props.healthData]
     console.log(newData, 'newdata')
     
+    const selectGroup = () => {}
+    const handleChange = () => {}
     const asians = newData.filter(
         entry => entry.group == 'Asian'
     ).map((e,i) => {
@@ -18,9 +20,24 @@ const HealthyDataSort = (props) => {
         ) 
  
     })
+    const sortGroup = newData.filter(
+                entry => entry.group !== undefined).map((e,i) => {
+        return(
+            <option key={e.group, i} value={e.group}>
+                {e.group}
+            </option>
+        )
+    })
+    
     return (
         <div>
             {asians}
+            <form onSubmit={selectGroup}> 
+                <select name='group' onChange={handleChange}> 
+                    {sortGroup}
+                </select>
+                <button type='submit'>sort by group</button>
+            </form>
         </div>
         
     )
