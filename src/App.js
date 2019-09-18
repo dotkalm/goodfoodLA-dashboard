@@ -8,6 +8,7 @@ import Nav from './Nav'
 import Affordable from './Affordable'
 import { withFirebase } from './Firebase'
 import Healthy from './Healthy'
+import Test from './Test'
 
 class App extends Component {
     state = {
@@ -38,6 +39,11 @@ class App extends Component {
                 <Route exact path="/Affordable"
                   render={(props)=>{
                     return <Affordable data={this.state}/>
+                }}/>
+
+                <Route exact path="/Test"
+                  render={(props)=>{
+                    return <Test data={this.state}/>
                 }}/>
                 
                 <Route exact path='/' 

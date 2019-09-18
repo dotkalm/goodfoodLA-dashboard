@@ -47,8 +47,8 @@ class SignUpFormBase extends Component {
       })
     return (
       <div>
-        {healthyStats }
-        <Test state={this.state.stats} />
+        {healthyStats}
+        <Test state={this.state} stats={healthyStats} />
       </div>
          )
   }
