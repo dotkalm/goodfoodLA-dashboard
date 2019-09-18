@@ -5,9 +5,13 @@ import { Route, Switch } from 'react-router-dom'
 import Login from './Login'
 import Add from './Add'
 import Nav from './Nav'
+import Footer from './Footer'
 import Affordable from './Affordable'
 import { withFirebase } from './Firebase'
 import Healthy from './Healthy'
+import Test from './Test'
+import Healthy1 from './Healthy/index1'
+
 import HealthyGroupSvg from './Home'
 
 class App extends Component {
@@ -43,9 +47,20 @@ class App extends Component {
                   render={(props)=>{
                     return <Affordable data={this.state}/>
                 }}/>
+
+                <Route exact path="/Test"
+                  render={(props)=>{
+                    return <Test data={this.state}/>
+                }}/>
+
+                <Route exact path="/asdf"
+                  render={(props)=>{
+                    return <Healthy1 data={this.state}/>
+                }}/>
                 
                 
               </Switch>
+            <Footer/>
           </div>
         )
     }

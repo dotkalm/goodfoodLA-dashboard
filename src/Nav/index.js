@@ -7,12 +7,19 @@ import {
   NavLeft,
   Link 
 } from './style'
+import image from './LOGO.png';
 
 const Nav = ({ routes = [] }) => {
   return (
-    <NavContainer color={"white"}>
-      <NavRow>
+    <NavContainer color={"white"} >
+      <NavRow>  
         <NavLeft>
+          <div className="dashboard">
+            <a href="https://www.goodfoodla.org"><img src={`${image}`} id="logo" alt="logo"/></a>
+            <div id="dashboardText">
+              <span id="dashboardText"><br/>Food <br/>System<br/>Dashboard</span>
+            </div>
+          </div>
         </NavLeft>
         <NavMiddle>
           {
@@ -22,6 +29,7 @@ const Nav = ({ routes = [] }) => {
           }
         </NavMiddle>
         <NavRight>
+          <a id="lafpcLink" href="https://www.goodfoodla.org">LAFPC Home</a>
         </NavRight>
       </NavRow>
     </NavContainer>
