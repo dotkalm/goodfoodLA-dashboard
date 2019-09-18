@@ -4,21 +4,23 @@ import HealthyDataSort from './sort'
 import { withFirebase } from '../Firebase'
 import * as ROUTES from '../constants/routes'
 import Test from '../Test'
+import Affordable from '../Affordable'
 
 const SignUp = (props) => {
   return (
     <div>
       <h1>Healthy</h1>
-        <SignUpForm setUserId={props.setUserId}/>
+        <SignUpForm setUserId={props.setUserId} grabGroup={props.grabGroup}/>
     </div>
   )
 }
-
 class SignUpFormBase extends Component {
   state = {
+       group: '',
        data: [],
        stats: []
   }
+   
     componentDidMount(){
         this.props.firebase.topLevel().on('value', snapshot => 
             {this.setState({ loading: false })
@@ -45,9 +47,11 @@ class SignUpFormBase extends Component {
       })
     return (
            <div> 
-             {healthyStats }
+             {/* {healthyStats } */}
         <Test state={this.state.stats} />
-           <HealthyDataSort healthData={this.state.stats}/>
+           <HealthyDataSort healthData={this.state.stats}  selectedGroup={this.props.selectedGroup} grabGroup={this.props.grabGroup}/>
+           
+
     </div>
          )
   }
