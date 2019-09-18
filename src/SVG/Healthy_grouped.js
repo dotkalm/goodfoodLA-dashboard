@@ -6,6 +6,7 @@ const HealthyGrouped = () => {
 
     return (
         <SVGWindow>
+        <p> Healthy </p>
    <svg version="1.1" id="Layer_1" viewBox="0 0 100 100"> 
 <ellipse id="BG" fill="#79B353" cx="44.952" cy="49.905" rx="44.952" ry="45.143"/>
 <g id="bread" className='bread'>
