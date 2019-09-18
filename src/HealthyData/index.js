@@ -6,15 +6,15 @@ import * as ROUTES from '../constants/routes'
 import Test from '../Test'
 import Affordable from '../Affordable'
 
-const SignUp = (props) => {
+const HealthyData = (props) => {
   return (
     <div>
       <h1>Healthy</h1>
-        <SignUpForm setUserId={props.setUserId} grabGroup={props.grabGroup}/>
+        <HealthyDataForm setUserId={props.setUserId} grabGroup={props.grabGroup}/>
     </div>
   )
 }
-class SignUpFormBase extends Component {
+class HealthyDataFormBase extends Component {
   state = {
        group: '',
        data: [],
@@ -48,7 +48,6 @@ class SignUpFormBase extends Component {
     return (
            <div> 
              {/* {healthyStats } */}
-        <Test state={this.state.stats} />
            <HealthyDataSort healthData={this.state.stats}  selectedGroup={this.props.selectedGroup} grabGroup={this.props.grabGroup}/>
            
 
@@ -57,9 +56,9 @@ class SignUpFormBase extends Component {
   }
 }
 
-const SignUpForm = withRouter(withFirebase(SignUpFormBase))
+const HealthyDataForm = withRouter(withFirebase(HealthyDataFormBase))
 
 
 
-export default SignUp
+export default HealthyData
 

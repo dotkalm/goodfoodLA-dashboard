@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import '../App.css'
 import HealthyDataSort from '../HealthyData/sort'
-import Test from '../Test'
 
-class Healthy1 extends Component  {
+class TopArea extends Component  {
   
     render(){
       return(
@@ -31,22 +30,10 @@ class Healthy1 extends Component  {
             </div>
           </div>
 
-          <div className="healthyGraphContent">
-            <div id="keyFindings">
-              Key Findings
-              <p>Text</p>
-              <p>Text</p>
-              <p>Text</p>
-              <p>Text</p>
-            </div>
-            <div id="graph">
-              <Test />
-            </div>
-          </div>
-
+         
         </div>
       )
     }
 }
 
-export default Healthy1;
+export default TopArea;

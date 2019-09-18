@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import HealthyData from '../HealthyData'
-
+import TopArea from './TopArea'
 
 class Healthy extends Component {
     state = {
@@ -29,6 +29,7 @@ class Healthy extends Component {
     
         return (
         <div>
+            <TopArea/>
             <HealthyData grabGroup={this.grabGroup.bind(this)} selectedGroup={this.state.group}/>
         </div>
         )
