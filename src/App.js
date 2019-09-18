@@ -9,13 +9,10 @@ import Footer from './Footer'
 import Affordable from './Affordable'
 import { withFirebase } from './Firebase'
 import Healthy from './Healthy'
-<<<<<<< HEAD
 import Test from './Test'
 import Healthy1 from './Healthy/index1'
 
-=======
 import HealthyGroupSvg from './Home'
->>>>>>> c6ef362a28c68fdaf8a4a616bd32517865b40440
 
 class App extends Component {
     state = {
