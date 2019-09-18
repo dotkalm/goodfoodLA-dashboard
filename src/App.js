@@ -8,6 +8,7 @@ import Nav from './Nav'
 import Affordable from './Affordable'
 import { withFirebase } from './Firebase'
 import Healthy from './Healthy'
+import HealthyGroupSvg from './Home'
 
 class App extends Component {
     state = {
@@ -22,7 +23,10 @@ class App extends Component {
           <div>
             <Nav routes={ROUTES.NAV}/>                
               <Switch>
-
+                <Route exact path={ROUTES.HOME}
+                      render={(props)=>{
+                        return <HealthyGroupSvg/>
+                  }}/>
                 <Route exact path={ROUTES.ADD} 
                     render={()=>{
                       return <Graph 
@@ -40,12 +44,7 @@ class App extends Component {
                     return <Affordable data={this.state}/>
                 }}/>
                 
-                <Route exact path='/' 
-                    render={()=>{
-                      return <Graph 
-                        data={this.state.stats}
-                        handleSelect={this.handleSelect}/>
-                }}/>
+                
               </Switch>
           </div>
         )
