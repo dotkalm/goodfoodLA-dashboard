@@ -1,24 +1,26 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-
+import HealthyDataSort from './sort'
 import { withFirebase } from '../Firebase'
 import * as ROUTES from '../constants/routes'
 import Test from '../Test'
+import Affordable from '../Affordable'
 
 const SignUp = (props) => {
   return (
     <div>
       <h1>Healthy</h1>
-        <SignUpForm setUserId={props.setUserId}/>
+        <SignUpForm setUserId={props.setUserId} grabGroup={props.grabGroup}/>
     </div>
   )
 }
-
 class SignUpFormBase extends Component {
   state = {
+       group: '',
        data: [],
        stats: []
   }
+   
     componentDidMount(){
         this.props.firebase.topLevel().on('value', snapshot => 
             {this.setState({ loading: false })
@@ -28,11 +30,9 @@ class SignUpFormBase extends Component {
                     newArray.push(affordable[item])
                 }
                 this.setState({stats: newArray})
-                console.log(this.state.stats, 'line 28')
         })
     }
   render() {
-   console.log(this.state) 
     const healthyStats =  this.state.stats.map((e,i) => {
         return (
             <div key={`${i}`}>
@@ -46,10 +46,13 @@ class SignUpFormBase extends Component {
       
       })
     return (
-      <div>
-        {healthyStats}
-        <Test state={this.state} stats={healthyStats} />
-      </div>
+           <div> 
+             {/* {healthyStats } */}
+        <Test state={this.state.stats} />
+           <HealthyDataSort healthData={this.state.stats}  selectedGroup={this.props.selectedGroup} grabGroup={this.props.grabGroup}/>
+           
+
+    </div>
          )
   }
 }

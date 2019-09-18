@@ -5,12 +5,12 @@ class Affordable extends Component {
 
   state = {
     chartData: {
-      labels: ['Adults living at 0-199% FPL', 'All adults', 'something'],
+      labels: ['Adults living at 0-199% FPL', 'All adults'],
       datasets: [
         {
           label: "Fruit & Vegetable Accessibility",
           data: [
-            81.9, 79.7, 80
+            81.9, 79.7
           ],
           backgroundColor:[
             'rgba(255, 99, 132, 0.8)',
@@ -32,7 +32,8 @@ class Affordable extends Component {
   }
 
   render() {
-    
+
+    console.log(this.props.data, 'this.props in affordable')
     return(
       <div>
           
@@ -43,7 +44,7 @@ class Affordable extends Component {
             options={{maintainAspectRatio: false , responsive:false}}
           />
 
-        <div className="foodInsecurity">
+        {/* <div className="foodInsecurity">
           <form onSubmit={this.onSubmit}>
             <h3>Food Insecurity</h3>
             <h4>Households living at 0-99% FPL</h4>
@@ -95,7 +96,7 @@ class Affordable extends Component {
             />
             <br/><button onSubmit={this.onSubmit}>Submit</button>
           </form>
-        </div>
+        </div> */}
 
       </div>
     )
