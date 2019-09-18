@@ -17,11 +17,28 @@
   color: #61dafb;
 }
 
+img#logo {
+  width: 150px;
+}
+.dashboard {
+  display: flex;
+}
+#dashboardText{
+  font-size: 28px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  height: 150px;
+}
 #lafpcLink {
   color: white;
   font-weight: 600;
   text-decoration: none;
-  padding: 0 15px;
+  padding: 15px;
+}
+#lafpcLink:hover{
+  border-bottom: 2px solid white;
+  padding: 10px 15px;
 }
 
 div.rectangle {
@@ -66,4 +83,26 @@ div.rectangle {
 #graph {
   display: flex;
   justify-content: space-around;
+}
+
+.footer {
+  text-align-last: center;
+}
+
+#socialMedia {
+  justify-content: center;
+  width: 25px;
+  height: auto;
+  padding: 5px;
+}
+
+#socialMedia:hover {
+  transform: translateY(-10px);
+  transition: all .3s;
+}
+
+#copyright {
+  text-align: center;
+  color: white;
+  padding: 5px;
 }

@@ -1,32 +1,21 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
-import image from './HealthyHeaderbkgrd.png'
 
 
-export const NavContainer = styled.div`
-  background-image: url(${image});
+export const FooterContainer = styled.div`
+  background: #156272;
   border-bottom: 1px solid black;
 `
 
-export const NavRow = styled.div`
+export const FooterRow = styled.div`
   max-width: 1400px;
   padding: 10px 0;
   width: 100%;
-  height: 150px;
+  height: 100px;
   display: flex;
   align-items: center;
   margin: 0 auto;
-`
-export const NavLeft = styled.div`
-  width: 32%;
-`
-export const NavMiddle = styled.div`
-  width: 36%;
-  text-align: center;
-`
-export const NavRight = styled.div`
-  width: 32%;
-  text-align: right;
+  justify-content: center;
 `
 
 export const Link = styled(NavLink)`

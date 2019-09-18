@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../App.css'
 import HealthyDataSort from '../HealthyData/sort'
+import Test from '../Test'
 
 class Healthy1 extends Component  {
   
@@ -39,7 +40,7 @@ class Healthy1 extends Component  {
               <p>Text</p>
             </div>
             <div id="graph">
-              <HealthyDataSort/>
+              <Test />
             </div>
           </div>
 

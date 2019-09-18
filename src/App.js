@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom'
 import Login from './Login'
 import Add from './Add'
 import Nav from './Nav'
+import Footer from './Footer'
 import Affordable from './Affordable'
 import { withFirebase } from './Firebase'
 import Healthy from './Healthy'
@@ -60,6 +61,7 @@ class App extends Component {
                         handleSelect={this.handleSelect}/>
                 }}/>
               </Switch>
+            <Footer/>
           </div>
         )
     }
