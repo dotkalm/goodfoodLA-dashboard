@@ -10,9 +10,9 @@ import {
 
 const Nav = ({ routes = [] }) => {
   return (
-    <NavContainer color={"white"}>
+    <NavContainer color={"white"} >
       <NavRow>
-        <NavLeft>
+        <NavLeft> 
         </NavLeft>
         <NavMiddle>
           {
@@ -22,6 +22,7 @@ const Nav = ({ routes = [] }) => {
           }
         </NavMiddle>
         <NavRight>
+          <a id="lafpcLink" href="https://www.goodfoodla.org">LAFPC Home</a>
         </NavRight>
       </NavRow>
     </NavContainer>

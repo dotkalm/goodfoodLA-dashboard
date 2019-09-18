@@ -2,12 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -23,11 +17,53 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#lafpcLink {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+div.rectangle {
+  display: block;
+  text-align: center;
+  /* position: absolute; */
+  /* width: 1445px; */
+  /* height: 536px; */
+  background: #F9F9F3;
+  font-size: 38px;
+  text-transform: uppercase;
+  padding: 25px;
+  /* left: -5px;
+  top: 361px; */
+}
+
+.healthyFour {
+  display: flex;
+}
+
+#healthyNumber {
+  color: #79B353;
+  font-size: 100px;
+}
+
+.healthyNumber {
+  text-transform: uppercase;
+  font-size: 21px;
+  /* line-height: 181.4%; */
+  text-align: center;
+  letter-spacing: 0.07em;
+  color: #4F4F4F;
+
+  max-width: 25%;
+  padding: 0 25px;
+}
+
+.keyFindings {
+  display: flex
+}
+
+#graph {
+  display: flex;
+  justify-content: space-around;
 }

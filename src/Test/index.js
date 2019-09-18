@@ -6,15 +6,23 @@ class Test extends Component {
 
   state = {
     obeseChildren: {
-      labels: ['2011', '2015', ''],
       options: {
+        title: {
+            display: true,
+            fontSize: 25,
+            text: "LA County's % of obese children in grades 5, 7 & 9"
+        },
+        legend: {
+            display: false
+        },
         scales: {
-          xAxes: [{ maxBarWidth: 1, maxBarWidth: 1 }],
-          yAxes: [{ maxBarWidth: 1, maxBarWidth: 1 }],
+            xAxes: [{ maxBarWidth: 1, maxBarWidth: 1 }],
+            yAxes: [{ maxBarWidth: 1, maxBarWidth: 1 }],
         }
       },
+      labels: ['2011', '2015', ''],
       datasets: [{
-        label: "LA County's % of obese children in grades 5, 7 & 9",
+        label: "",
         data: [
           22.4, 21.2, 10, 25
         ],
