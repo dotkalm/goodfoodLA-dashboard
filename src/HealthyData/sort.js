@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Affordable from '../Affordable'
 import { Bar } from 'react-chartjs-2';
+import HealthyGroupSvg from '../Home'
 
 const HealthyDataSort = (props) => {
     const [charObj, setcharObj] = useState({
