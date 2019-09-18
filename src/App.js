@@ -10,7 +10,6 @@ import Affordable from './Affordable'
 import { withFirebase } from './Firebase'
 import Healthy from './Healthy'
 import Test from './Test'
-import Healthy1 from './Healthy/index1'
 
 import HealthyGroupSvg from './Home'
 
@@ -52,12 +51,6 @@ class App extends Component {
                   render={(props)=>{
                     return <Test data={this.state}/>
                 }}/>
-
-                <Route exact path="/asdf"
-                  render={(props)=>{
-                    return <Healthy1 data={this.state}/>
-                }}/>
-                
                 
               </Switch>
             <Footer/>
