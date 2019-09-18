@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom'
 
 import { withFirebase } from '../Firebase'
 import * as ROUTES from '../constants/routes'
+import Test from '../Test'
 
 const SignUp = (props) => {
   return (
@@ -45,7 +46,10 @@ class SignUpFormBase extends Component {
       
       })
     return (
-           <div> {healthyStats}  </div>
+      <div>
+        {healthyStats }
+        <Test state={this.state.stats} />
+      </div>
          )
   }
 }
