@@ -1,38 +1,53 @@
 import React, { Component } from 'react'
-import HealthyData from '../HealthyData'
+import '../App.css'
+import HealthyDataSort from '../HealthyData/sort'
+import Test from '../Test'
 
-
-class Healthy extends Component {
-    state = {
-        dataset: [],
-        group: '',
-        test: 0,
-    }
-    
-    componentDidMount(){
-        console.log('healthy')
-    }
-    
-    grabGroup(incomingGroupName){
-        this.setState((prevState, props) => {
-            console.log(props)
-            console.log(prevState)
-            return {group: incomingGroupName};
-          })
-        this.bigTest()
-      }
-    bigTest(){
-        console.log(this.state.group, ' inside grab group group')
-
-    }
+class Healthy extends Component  {
+  
     render(){
-    
-        return (
+      return(
         <div>
-            <HealthyData grabGroup={this.grabGroup.bind(this)} selectedGroup={this.state.group}/>
+
+          <div className="rectangle">
+            What are we trying to achieve?<br/>
+            <div className="healthyFour">
+              <div className="healthyNumber">
+                <span id="healthyNumber">1</span>
+                <p>Increased Healthy Food Access</p>
+              </div>
+              <div className="healthyNumber">
+                <span id="healthyNumber">2</span>
+                <p>Improved Eating Habits</p>
+              </div>
+              <div className="healthyNumber">
+                <span id="healthyNumber">3</span>
+                <p>Decreased Rates of Obesity & Overweight</p>
+              </div>
+              <div className="healthyNumber">
+                <span id="healthyNumber">4</span>
+                <p>Decreased Rates of Diet-related Disease</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="healthyGraphContent">
+            <div id="keyFindings">
+              Key Findings
+              <p>Text</p>
+              <p>Text</p>
+              <p>Text</p>
+              <p>Text</p>
+            </div>
+            <div id="graph">
+              <Test />
+              
+            </div>
+          </div>
+
         </div>
-        )
+      )
     }
 }
 
-export default Healthy
+export default Healthy;

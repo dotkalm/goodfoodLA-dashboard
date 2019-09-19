@@ -41,6 +41,22 @@ img#logo {
   padding: 10px 15px;
 }
 
+.homeFlex {
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px;
+}
+
+#homeText {
+  text-align: center;
+  padding: 10px 175px;
+}
+
+#homeTitle {
+  text-align: center;
+  text-transform: uppercase;
+}
+
 div.rectangle {
   display: block;
   text-align: center;
@@ -80,9 +96,13 @@ div.rectangle {
   display: flex
 }
 
-#graph {
+.healthyGraphContent{
   display: flex;
-  justify-content: space-around;
+}
+
+#graph {
+  max-width: 1000px;
+  margin: 20px auto;
 }
 
 .footer {
@@ -105,4 +125,20 @@ div.rectangle {
   text-align: center;
   color: white;
   padding: 5px;
+}
+
+#list {
+  padding: 0 300px;
+}
+
+li {
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li:before {
+  content: '✓';
 }

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 export const FooterContainer = styled.div`
   background: #156272;
-  border-bottom: 1px solid black;
+  border-top: 1px solid black;
 `
 
 export const FooterRow = styled.div`

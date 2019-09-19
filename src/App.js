@@ -9,10 +9,12 @@ import Footer from './Footer'
 import Affordable from './Affordable'
 import { withFirebase } from './Firebase'
 import Healthy from './Healthy'
+import Fair from './Fair'
+import Sustainable from './Sustainable'
 import Test from './Test'
-import Healthy1 from './Healthy/index1'
 
 import HealthyGroupSvg from './Home'
+
 
 class App extends Component {
     state = {
@@ -36,28 +38,28 @@ class App extends Component {
                       return <Graph 
                         data={this.state.stats} 
                         handleSelect={this.handleSelect}/>
-                }}/> 
-
+                }}/>
                 <Route exact path={ROUTES.HEALTHY} 
                   render={()=>{
                     return <Healthy data={this.state}/>
                 }}/>
-
-                <Route exact path="/Affordable"
+                <Route exact path={ROUTES.FAIR}
+                  render={(props)=>{
+                    return <Fair data={this.state}/>
+                }}/>
+                <Route exact path={ROUTES.AFFORDABLE}
                   render={(props)=>{
                     return <Affordable data={this.state}/>
+                }}/>
+                <Route exact path={ROUTES.SUSTAINABLE}
+                  render={(props)=>{
+                    return <Sustainable data={this.state}/>
                 }}/>
 
                 <Route exact path="/Test"
                   render={(props)=>{
                     return <Test data={this.state}/>
                 }}/>
-
-                <Route exact path="/asdf"
-                  render={(props)=>{
-                    return <Healthy1 data={this.state}/>
-                }}/>
-                
                 
               </Switch>
             <Footer/>

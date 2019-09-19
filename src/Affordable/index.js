@@ -4,99 +4,82 @@ import { Bar } from 'react-chartjs-2';
 class Affordable extends Component {
 
   state = {
-    chartData: {
-      labels: ['Adults living at 0-199% FPL', 'All adults'],
+    calFreshPeople: {
+      labels: ['2012 LA DPSS', '2015 LA DPSS'],
       datasets: [
         {
-          label: "Fruit & Vegetable Accessibility",
-          data: [
-            81.9, 79.7
-          ],
-          backgroundColor:[
-            'rgba(255, 99, 132, 0.8)',
-            'rgba(54, 162, 235, 0.8)'
-          ]
-        }
+          label: "Number of CalFresh participants in LA County",
+          data: [1110832, 1180033, 1000000],
+          backgroundColor: 'rgba(80, 118, 90, 0.8)',
+          backgroundColor: 'rgba(54, 162, 235, 0.8)'
+          }    
       ]
+    },
+
+    calFreshBenefits: {
+      labels: ['2012 California Food Policy Advocates', '2014 California Food Policy Advocates'],
+      datasets: [{
+        label: "CalFresh benefits lost due to underutilization",
+        data: [993000000, 1290000000, 50000000],
+        backgroundColor: [
+          'rgba(115, 108, 237, 0.8)',
+          'rgba(54, 162, 235, 0.8)'
+        ]
+      }]
     }
-  }
-
-  onChange = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  }
-
-  onSubmit = event => {
-    //submit data to db
   }
 
   render() {
 
-    console.log(this.props.data, 'this.props in affordable')
     return(
       <div>
-          
-          <Bar
-            data={this.state.chartData}
-            width={800}
-            height={500}
-            options={{maintainAspectRatio: false , responsive:false}}
-          />
 
-        {/* <div className="foodInsecurity">
-          <form onSubmit={this.onSubmit}>
-            <h3>Food Insecurity</h3>
-            <h4>Households living at 0-99% FPL</h4>
-            Enter Number
-            <input 
-            type="text"
-            name=""
-            value=""
-            onChange={this.onChange}
-            />
-            <br/>Source
-            <input 
-            type="text"
-            name=""
-            value=""
-            onChange={this.onChange}
-            />
-            <br/><button onSubmit={this.onSubmit}>Submit</button>
-            <h4>Households living at 100-199% FPL</h4>
-            Enter Number
-            <input 
-            type="text"
-            name=""
-            value=""
-            onChange={this.onChange}
-            />
-            <br/>Source
-            <input 
-            type="text"
-            name=""
-            value=""
-            onChange={this.onChange}
-            />
-            <br/><button onSubmit={this.onSubmit}>Submit</button>
-            <h4>Households living at 200-299% FPL</h4>
-            Enter Number
-            <input 
-            type="text"
-            name=""
-            value=""
-            onChange={this.onChange}
-            />
-            <br/>Source
-            <input 
-            type="text"
-            name=""
-            value=""
-            onChange={this.onChange}
-            />
-            <br/><button onSubmit={this.onSubmit}>Submit</button>
-          </form>
-        </div> */}
+        <div className="rectangle">
+          What are we trying to achieve?<br/>
+          <div className="healthyFour">
+            <div className="healthyNumber">
+              <span id="healthyNumber">1</span>
+              <p>Increase Household Food Security</p>
+            </div>
+            <div className="healthyNumber">
+              <span id="healthyNumber">2</span>
+              <p>Decrease Racial and Ethnic Disparities</p>
+            </div>
+            <div className="healthyNumber">
+              <span id="healthyNumber">3</span>
+              <p>Improve Access to Healhy Food</p>
+            </div>
+            <div className="healthyNumber">
+              <span id="healthyNumber">4</span>
+              <p>Participation In Food Assistance Programs</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="healthyGraphContent">
+            <div id="keyFindings">
+              Key Findings
+              <p>Text</p>
+              <p>Text</p>
+              <p>Text</p>
+              <p>Text</p>
+            </div>
+            <div id="graph">
+              <Bar
+                data={this.state.calFreshPeople}
+                width={800}
+                height={500}
+                options={{maintainAspectRatio: false , responsive:false}}
+              />
+            <br/>
+              <Bar
+                data={this.state.calFreshBenefits}
+                width={800}
+                height={500}
+                options={{maintainAspectRatio: false , responsive:false}}
+              />
+            </div>
+          </div>
 
       </div>
     )
