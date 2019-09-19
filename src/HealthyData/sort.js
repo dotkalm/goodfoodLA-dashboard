@@ -13,21 +13,20 @@ const HealthyDataSort = (props) => {
                     81.9,
                 ],
                 backgroundColor:[
-                    'rgba(255, 99, 132, 0.8)',
-                    'rgba(54, 162, 235, 0.8)'
-                ]
+                    '#356032',
+                    '#7bb258'
+
+                                    ]
             }
         ]
     })
     const [group, setGroup] = useState('')
     const newData = [...props.healthData]
     const newData2 = [...props.healthData]
-    console.log(charObj, 'newdata')
     
     const selectGroup = (e) => {
         e.preventDefault()
         props.grabGroup(group)
-        console.log(group, 'group<-------')
         const newobjtest = newData2.filter(entry => entry.group === group).map((e,i) => {
             return (
                 {
@@ -37,8 +36,8 @@ const HealthyDataSort = (props) => {
                             label: e.indicator,
                             data: [+(e.baseline.toString().replace(/\%/,'')), +(e.update.toString().replace(/\%/,''))],
                             backgroundColor:[
-                                'rgba(255, 99, 132, 0.8)',
-                                'rgba(54, 162, 235, 0.8)'
+                                '#356032',
+                                '#7bb258'
                             ]
                         }
                     ]
@@ -80,7 +79,7 @@ const HealthyDataSort = (props) => {
     })
     // console.log(group, 'group')
     return (
-        <div>
+        <div className="bigGraph">
             <form onSubmit={selectGroup}> 
                 <select name='group' onChange={e => setGroup(e.target.value)} > 
                     {sortGroup}
@@ -89,9 +88,18 @@ const HealthyDataSort = (props) => {
             </form>
             {groupsOfCitizens}
             {charObj[0] === undefined ? 
-                <Bar data={charObj}/>
-            :
-                <Bar data={charObj[0]}/>
+                <Bar data={charObj}
+                    width={800}
+                    height={400}
+                    options={{ responsive:false}}
+              />
+:
+                <Bar data={charObj[0]}
+                    width={800}
+                    height={400}
+                    options={{ responsive:false}}
+               />
+
             }
             
             

@@ -8,10 +8,9 @@ import Affordable from '../Affordable'
 
 const HealthyData = (props) => {
   return (
-    <div>
-      <h1>Healthy</h1>
-        <HealthyDataForm setUserId={props.setUserId} grabGroup={props.grabGroup}/>
-    </div>
+    <span>
+            <HealthyDataForm setUserId={props.setUserId} grabGroup={props.grabGroup}/>
+    </span>
   )
 }
 class HealthyDataFormBase extends Component {
@@ -46,7 +45,7 @@ class HealthyDataFormBase extends Component {
       
       })
     return (
-           <div> 
+           <div className='bigGraph' > 
              {/* {healthyStats } */}
            <HealthyDataSort healthData={this.state.stats}  selectedGroup={this.props.selectedGroup} grabGroup={this.props.grabGroup}/>
            

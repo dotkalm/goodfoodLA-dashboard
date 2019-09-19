@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import HealthyData from '../HealthyData'
 import TopArea from './TopArea'
+import { GraphContainer } from './style'
+import Buttons from '../HealthyData/Buttons'
 
 class Healthy extends Component {
     state = {
@@ -11,6 +13,7 @@ class Healthy extends Component {
     
     componentDidMount(){
         console.log('healthy')
+
     }
     
     grabGroup(incomingGroupName){
@@ -30,7 +33,12 @@ class Healthy extends Component {
         return (
         <div>
             <TopArea/>
-            <HealthyData grabGroup={this.grabGroup.bind(this)} selectedGroup={this.state.group}/>
+            <GraphContainer>
+                <p>Key Findings</p>
+                <Buttons/>
+                <HealthyData grabGroup={this.grabGroup.bind(this)} selectedGroup={this.state.group}/>
+                <div className="clearfix"></div>
+            </GraphContainer>
         </div>
         )
     }
