@@ -142,3 +142,7 @@ ul {
 ul li:before {
   content: '✓';
 }
+
+a {
+  text-decoration: none;
+}

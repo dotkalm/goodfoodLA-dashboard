@@ -52,13 +52,6 @@ class Fair extends Component {
         </div>
 
         <div className="healthyGraphContent">
-            <div id="keyFindings">
-              Key Findings
-              <p>Text</p>
-              <p>Text</p>
-              <p>Text</p>
-              <p>Text</p>
-            </div>
             <div id="graph">
               <Bar
                 data={this.state.hourlyWage1}
