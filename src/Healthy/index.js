@@ -41,7 +41,7 @@ class Healthy extends Component  {
             </div>
             <div id="graph">
               <Test />
-              <HealthyDataSort />
+              
             </div>
           </div>
 

@@ -80,9 +80,13 @@ div.rectangle {
   display: flex
 }
 
-#graph {
+.healthyGraphContent{
   display: flex;
-  justify-content: space-around;
+}
+
+#graph {
+  max-width: 1000px;
+  margin: 20px auto;
 }
 
 .footer {

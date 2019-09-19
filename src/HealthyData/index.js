@@ -50,7 +50,6 @@ class SignUpFormBase extends Component {
              {/* {healthyStats } */}
         <Test state={this.state.stats} />
            <HealthyDataSort healthData={this.state.stats}  selectedGroup={this.props.selectedGroup} grabGroup={this.props.grabGroup}/>
-           
 
     </div>
          )
