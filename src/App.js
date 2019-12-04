@@ -32,7 +32,7 @@ class App extends Component {
                 <Route exact path={ROUTES.HOME}
                       render={(props)=>{
                         return <HealthyGroupSvg/>
-                  }}/>
+                }}/>
                 <Route exact path={ROUTES.ADD} 
                     render={()=>{
                       return <Graph 
@@ -55,7 +55,6 @@ class App extends Component {
                   render={(props)=>{
                     return <Sustainable data={this.state}/>
                 }}/>
-
                 <Route exact path="/Test"
                   render={(props)=>{
                     return <Test data={this.state}/>

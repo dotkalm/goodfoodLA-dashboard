@@ -10,7 +10,7 @@ class Fair extends Component {
       datasets: [{
         label: "Average hourly wage of nonsupervisory food system worker",
         data: [10.62, 12.59, 0],
-        backgroundColor: 'rgba(115, 108, 237, 0.8)'
+        backgroundColor: 'rgba(70, 177, 201, 0.8)'
         }]
     }, 
     

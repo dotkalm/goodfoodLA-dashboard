@@ -5,33 +5,6 @@ import { thisExpression } from '@babel/types';
 class Test extends Component {
 
   state = {
-    obeseChildren: {
-      options: {
-        title: {
-            display: true,
-            fontSize: 25,
-            text: "LA County's % of obese children in grades 5, 7 & 9"
-        },
-        legend: {
-            display: false
-        },
-        scales: {
-            xAxes: [{ maxBarWidth: 1, maxBarWidth: 1 }],
-            yAxes: [{ maxBarWidth: 1, maxBarWidth: 1 }],
-        }
-      },
-      labels: ['2011', '2015', ''],
-      datasets: [{
-        label: "",
-        data: [
-          22.4, 21.2, 10, 25
-        ],
-        backgroundColor:[
-          'rgba(255, 99, 132, 0.8)',
-          'rgba(255, 99, 132, 0.8)',
-        ]
-      }]
-    },
 
     diabetesAdult: {
       labels: ['African-American', 'Asian', 'Latino', 'White', 'Native Hawaiian/Pacific Islanders', 'American Indian/Native Alaskan'],
@@ -92,12 +65,6 @@ class Test extends Component {
     render(){
       return(
         <div>
-          <Bar
-            data={this.state.obeseChildren}
-            width={400}
-            height={300}
-            options={{ responsive:false}}
-          />
           <Bar
             data={this.state.diabetesAdult}
             width={800}
