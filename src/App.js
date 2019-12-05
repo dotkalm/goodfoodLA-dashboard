@@ -12,8 +12,7 @@ import Healthy from './Healthy'
 import Fair from './Fair'
 import Sustainable from './Sustainable'
 import Test from './Test'
-
-import HealthyGroupSvg from './Home'
+import Home from './Home'
 
 
 class App extends Component {
@@ -27,11 +26,11 @@ class App extends Component {
     render(){
         return(
           <div>
-            <Nav routes={ROUTES.NAV}/>                
+            <Nav routes={ROUTES.NAV}/>
               <Switch>
                 <Route exact path={ROUTES.HOME}
                       render={(props)=>{
-                        return <HealthyGroupSvg/>
+                        return <Home data={this.state}/>
                 }}/>
                 <Route exact path={ROUTES.ADD} 
                     render={()=>{
@@ -61,6 +60,7 @@ class App extends Component {
                 }}/>
                 
               </Switch>
+
             <Footer/>
           </div>
         )

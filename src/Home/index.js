@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+// import React, { Component } from 'react'
 import AffordableGrouped from '../SVG/AffordableGrouped'
 import { DivStyle, 
 DivContainer } from './style'
@@ -6,8 +7,7 @@ import HealthyGrouped from '../SVG/Healthy_grouped'
 import FairGrouped from '../SVG/FairGrouped'
 import SustainableGrouped from '../SVG/SustainableGrouped'
 
-const HealthyGroupSvg = (props) => {
-    console.log('inside healthy group')
+const Home = (props) => {
     return (
         <div className="homeFlex">
             <span id="homeText">The Food System Dashboard utilizes both quantitative and qualitative data to evaluate progress in achieving a healthier, greener and more equitable food system in Los Angeles. The Los Angeles Food Policy Council produced the Food System Dashboard for organizations, agencies, policymakers and the public to guide our strategy and measure impact in achieving “Good Food for All.”</span>
@@ -30,8 +30,6 @@ const HealthyGroupSvg = (props) => {
               </ul>
         </div>
     )
-
-
 }
 
-export default HealthyGroupSvg
+export default Home;
