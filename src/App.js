@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Graph from './Graph'
 import * as ROUTES from './constants/routes'
-import { Route, Switch } from 'react-router-dom'
+import { Link, Route, Switch } from 'react-router-dom'
 import Login from './Login'
 import Add from './Add'
 import Nav from './Nav'
@@ -27,7 +27,11 @@ class App extends Component {
         return(
           <div>
             <Nav routes={ROUTES.NAV}/>
+            
               <Switch>
+                <Route exact path={'/'}>
+                  <Home/>
+                </Route>
                 <Route exact path={ROUTES.HOME}
                       render={(props)=>{
                         return <Home data={this.state}/>

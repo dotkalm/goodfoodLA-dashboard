@@ -2,7 +2,7 @@
   "name": "dashboard",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://wong-ton.github.io/goodfoodLA-dashboard/home",
+  "homepage": "https://wong-ton.github.io/goodfoodLA-dashboard/",
   "dependencies": {
     "chart.js": "^2.8.0",
     "firebase": "^6.6.1",
