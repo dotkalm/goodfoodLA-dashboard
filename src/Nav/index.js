@@ -17,7 +17,7 @@ const Nav = ({ routes = [] }) => {
           <div className="dashboard">
             <a href="https://www.goodfoodla.org"><img src={`${image}`} id="logo" alt="logo"/></a>
             <div id="dashboardText">
-              <a href="/"><span id="dashboardText"><br/>Food <br/>System<br/>Dashboard</span></a>
+              <a href="/home"><span id="dashboardText"><br/>Food <br/>System<br/>Dashboard</span></a>
             </div>
           </div>
         </NavLeft>
