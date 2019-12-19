@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 export const FooterContainer = styled.div`
   background: #156272;
   border-top: 1px solid black;
-  @media (min-width: 4000px) { 
+  @media (min-width: 1920px) { 
     position: absolute;
     bottom: 0;
     width: 100%;
