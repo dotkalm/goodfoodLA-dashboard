@@ -5,6 +5,7 @@ import image from './HealthyHeaderbkgrd.png'
 
 export const NavContainer = styled.div`
   background-image: url(${image});
+  background-size: cover;
   border-bottom: 1px solid black;
 `
 

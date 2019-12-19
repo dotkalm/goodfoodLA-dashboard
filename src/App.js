@@ -27,11 +27,11 @@ class App extends Component {
         return(
           <div>
             <Nav routes={ROUTES.NAV}/>
-            
+              <Home/>
               <Switch>
-                <Route exact path={ROUTES.HOME1}>
+                {/* <Route exact path={ROUTES.HOME1}>
                   <Home/>
-                </Route>
+                </Route> */}
                 <Route exact path={ROUTES.HOME}
                       render={(props)=>{
                         return <Home data={this.state}/>
