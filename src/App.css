@@ -30,6 +30,11 @@ img#logo {
   font-weight: 500;
   height: 150px;
 }
+@media (max-width: 414px){
+  #dashboardText{
+    font-size: 1.5rem;
+  }
+}
 #lafpcLink {
   color: white;
   font-weight: 600;
@@ -44,12 +49,32 @@ img#logo {
 .homeFlex {
   display: flex;
   flex-direction: column;
-  padding: 0 100px;
+  margin: 0 100px;
+}
+@media (max-width: 414px) {
+  .homeFlex{
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1920px) {
+  .homeFlex {
+    height: 77vh;
+  }
+}
+@media (min-width: 4000px) {
+  .homeFlex {
+    height: 88vh;
+  }
 }
 
 #homeText {
   text-align: center;
   padding: 10px 175px;
+}
+@media (max-width: 414px) {
+  #homeText {
+    padding: 0;
+  }
 }
 
 #homeTitle {
@@ -60,15 +85,10 @@ img#logo {
 div.rectangle {
   display: block;
   text-align: center;
-  /* position: absolute; */
-  /* width: 1445px; */
-  /* height: 536px; */
   background: #F9F9F3;
   font-size: 38px;
   text-transform: uppercase;
   padding: 25px;
-  /* left: -5px;
-  top: 361px; */
 }
 
 .healthyFour {
@@ -130,6 +150,11 @@ div.rectangle {
 #list {
   padding: 0 300px;
 }
+@media (max-width: 414px) {
+  #list {
+    padding: 0;
+  }
+}
 
 li {
   padding: 10px;
@@ -139,10 +164,29 @@ ul {
   list-style: none;
 }
 
+/* Changes bullets to a check mark */
 ul li:before {
   content: '✓';
 }
 
 a {
   text-decoration: none;
+}
+
+@media (max-width: 414px) {
+    #healthyNumber, p {
+    font-size: 1rem;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1920px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 4000px) {
+  body {
+    font-size: 2rem;
+  }
 }

@@ -2,14 +2,18 @@ import styled from 'styled-components'
 
 export const SustainableStyle = styled.div`
     padding: 25px;
-    width: 150rem
+    width: 150rem;
+
     .st0{fill:#52BAAF;}
     .st1{fill:#FED84D;}
     .st2{fill:#F7922D;}
     .st3{fill:#156272;}
     .st4{fill:#336130;}
     .st5{fill:#FCD790;}
-`
+    @media (max-width: 414px) {
+        padding: 5px;
+    }
+`;
 
 export const FairStyle = styled.div`
     padding: 25px;
@@ -20,9 +24,12 @@ export const FairStyle = styled.div`
     .st2{fill:#FED235;}
     .st3{fill:#A97A2B;}
     .st4{fill:#FDFADB;}
-`
+    @media (max-width: 414px) {
+        padding: 5px;
+    }
+`;
 export const AffordableStyle = styled.div`
-    width: 150rem 
+    width: 150rem; 
     padding: 25px;
     
     .st0{fill:#156272;}
@@ -31,15 +38,17 @@ export const AffordableStyle = styled.div`
     .st3{fill:#FFFFFF;}
     .st4{fill:#876F4B;}
     .st5{fill:#FAA829;}
-</style>
 
-`
+    @media (max-width: 414px) {
+        padding: 5px;
+    }
+`;
 
 
 export const SVGWindow = styled.div`
     padding: 25px;
+    width: 150rem;
 
-    width: 150rem
        .bread {
         color: #79b353;
         stroke-color: #f7922d;
@@ -60,9 +69,9 @@ export const SVGWindow = styled.div`
             transform-origin: center;}
         100% {transform: rotate(5deg);
             transform-origin: center;}
-    
-    .leaf_2 {
-    
     }
 
-    `
+    @media (max-width: 414px) {
+        padding: 5px;
+    }
+`;

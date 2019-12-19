@@ -27,11 +27,16 @@ class App extends Component {
         return(
           <div>
             <Nav routes={ROUTES.NAV}/>
-              <Home/>
               <Switch>
-                {/* <Route exact path={ROUTES.HOME1}>
-                  <Home/>
-                </Route> */}
+
+              {/* <Route exact path="/" component={Home}/>
+              <Route exact path="/goodfoodLA-dashboard/" component={Home}/> */}
+
+                <Route exact path={ROUTES.HOME1}
+                      render={(props)=>{
+                        return <Home data={this.state}/>
+                }}/>
+
                 <Route exact path={ROUTES.HOME}
                       render={(props)=>{
                         return <Home data={this.state}/>
