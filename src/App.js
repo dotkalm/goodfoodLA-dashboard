@@ -29,7 +29,7 @@ class App extends Component {
             <Nav routes={ROUTES.NAV}/>
             
               <Switch>
-                <Route exact path={'/'}>
+                <Route exact path={ROUTES.HOME1}>
                   <Home/>
                 </Route>
                 <Route exact path={ROUTES.HOME}

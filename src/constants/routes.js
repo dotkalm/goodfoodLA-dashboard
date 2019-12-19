@@ -5,4 +5,5 @@ export const FAIR = '/fair';
 export const SUSTAINABLE = '/sustainable';
 export const AFFORDABLE = '/affordable';
 export const HOME = '/home';
+export const HOME1 = '/'
 export const NAV = ["Affordable", "Fair", "Healthy", "Sustainable"]

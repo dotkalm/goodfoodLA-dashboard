@@ -72,7 +72,7 @@ div.rectangle {
 }
 
 .healthyFour {
-  display: flex;
+  display: inline-flex;
 }
 
 #healthyNumber {

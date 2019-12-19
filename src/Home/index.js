@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// import React, { Component } from 'react'
 import AffordableGrouped from '../SVG/AffordableGrouped'
 import { DivStyle, 
 DivContainer } from './style'
